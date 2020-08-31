@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css?v=202008270947">
+    <title>{{ data['title'] }} - Annotations</title>
+</head>
+
+<body class="has-background-light">
+    <br>
+    <div class="columns is-centered">
+        <div class="column is-half">
+            <div class="card">
+                <div class="card-content">
+                    <p class="title">{{ data['title'] }}</p>
+                    <p class="subtitle">{{ data['author'] }}</p>
+                </div>
+            </div>
+            <br>
+
+            <!-- Iterate here -->
+            {% for annotation in data['annotations'] %}
+
+            <div class="card">
+                <div class="card-content">
+                    <p class="subtitle">
+                        “{{ annotation }}”
+                    </p>
+                </div>
+            </div>
+            <br>
+
+            <!-- End iterate here -->
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>
